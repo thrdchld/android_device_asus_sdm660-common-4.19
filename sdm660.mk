@@ -344,6 +344,15 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Powerhint
+ifeq ($(EAS_POWERHINT_VARIANT), sdm636)
+    PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/power-libperfmgr/sdm636_powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+else
+    PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/power-libperfmgr/sdm660_powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+endif
+    
 # Permissions
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/privapp-permission/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
