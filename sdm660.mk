@@ -495,6 +495,10 @@ PRODUCT_COPY_FILES += \
 BOARD_API_LEVEL := 30
 
 # Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
+    hardware/google/pixel
+
 QCOM_SOONG_NAMESPACE := \
     $(COMMON_PATH)/qcom-caf
 
@@ -510,6 +514,9 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Thermal
