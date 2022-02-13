@@ -102,9 +102,6 @@ ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
-# Battery Saver
-TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power-libperfmgr/power/power-mode.cpp
-
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
