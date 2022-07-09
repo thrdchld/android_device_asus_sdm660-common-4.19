@@ -406,7 +406,11 @@ ifeq ($(EAS_POWERHINT_VARIANT), sdm636)
 else
     PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/power-libperfmgr/sdm660_powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-endif
+endif   
+
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
