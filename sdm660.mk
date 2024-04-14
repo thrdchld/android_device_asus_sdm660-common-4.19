@@ -489,9 +489,6 @@ PRODUCT_COPY_FILES += \
 BOARD_API_LEVEL := 30
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(COMMON_PATH)
-
 QCOM_SOONG_NAMESPACE := \
     $(COMMON_PATH)/qcom-caf
 
