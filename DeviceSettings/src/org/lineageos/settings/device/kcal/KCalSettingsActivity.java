@@ -31,7 +31,7 @@ public class KCalSettingsActivity extends CollapsingToolbarBaseActivity implemen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kcal);
+        setContentView(com.android.settingslib.collapsingtoolbar.R.layout.activity_kcal);
 
         Fragment fragment = getFragmentManager().findFragmentById(com.android.settingslib.collapsingtoolbar.R.id.fragment_kcal);
         if (fragment == null) {
@@ -47,11 +47,11 @@ public class KCalSettingsActivity extends CollapsingToolbarBaseActivity implemen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case com.android.settingslib.collapsingtoolbar.R.id.home:
                 finish();
                 return true;
 
-            case R.id.action_reset:
+            case com.android.settingslib.collapsingtoolbar.R.id.action_reset:
                 mKCalSettingsFragment.applyValues(RED_DEFAULT + " " +
                         GREEN_DEFAULT + " " +
                         BLUE_DEFAULT + " " +
@@ -64,7 +64,7 @@ public class KCalSettingsActivity extends CollapsingToolbarBaseActivity implemen
                 mKCalSettingsFragment.setmSetOnBoot(SETONBOOT_DEFAULT);
                 return true;
 
-            case R.id.action_preset:
+            case com.android.settingslib.collapsingtoolbar.R.id.action_preset:
                 new PresetDialog().show(getFragmentManager(),
                         KCalSettingsActivity.class.getName(), mKCalSettingsFragment);
                 return true;
@@ -78,7 +78,7 @@ public class KCalSettingsActivity extends CollapsingToolbarBaseActivity implemen
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu_reset, menu);
+        menuInflater.inflate(com.android.settingslib.collapsingtoolbar.R.menu.menu_reset, menu);
         return true;
     }
 }
