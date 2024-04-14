@@ -23,7 +23,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.widget.R;
 
 public class KCalSettingsActivity extends CollapsingToolbarBaseActivity implements Utils {
 
@@ -34,11 +33,11 @@ public class KCalSettingsActivity extends CollapsingToolbarBaseActivity implemen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kcal);
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.fragment_kcal);
+        Fragment fragment = getFragmentManager().findFragmentById(com.android.settingslib.collapsingtoolbar.R.id.fragment_kcal);
         if (fragment == null) {
             mKCalSettingsFragment = new KCalSettings();
             getFragmentManager().beginTransaction()
-                    .add(R.id.fragment_kcal, mKCalSettingsFragment)
+                    .add(com.android.settingslib.collapsingtoolbar.R.id.fragment_kcal, mKCalSettingsFragment)
                     .commit();
         } else {
             mKCalSettingsFragment = (KCalSettings) fragment;
