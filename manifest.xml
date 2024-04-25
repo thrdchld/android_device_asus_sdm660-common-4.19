@@ -381,6 +381,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@2.1::IFactory/default</fqname>
         <fqname>@2.2::IFactory/default</fqname>
         <fqname>@2.3::IFactory/default</fqname>
+        <fqname>@2.4::IFactory/default</fqname>
+        <fqname>@2.5::IFactory/default</fqname>
     </hal>
     <!-- DSP Service -->
     <hal format="hidl">
