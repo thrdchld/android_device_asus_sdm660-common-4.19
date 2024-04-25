@@ -204,7 +204,7 @@ case "$target" in
         esac
         start_charger_monitor
         ;;
-    "sdm660")
+    "sdm660" | "sdm636")
         if [ -f /sys/devices/soc0/soc_id ]; then
              soc_id=`cat /sys/devices/soc0/soc_id`
         else
