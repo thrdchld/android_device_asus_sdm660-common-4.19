@@ -1,6 +1,6 @@
 # Common proprietary files - from UL-ASUS_X01BD-WW-17.2018.2012.434-user build, unless pinned
 
-# ADSP - from S62Pro RKQ1.210406.002
+# ADSP - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
@@ -16,7 +16,7 @@ vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
-# ADSP Modules - from S62Pro RKQ1.210406.002
+# ADSP Modules - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
@@ -28,28 +28,28 @@ vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so|a4ded032d4ec44575d474af9e6a74ed5d8dad26a
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|a06a3f52e89d219d2da0c7205e714cd7429b267c
-vendor/lib/rfsa/adsp/libscveT2T_skel.so|487f830aca26c85ef79c8b599b2f03668ab732b5
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# Audio modules - from S62Pro RKQ1.210406.002
+# Audio modules - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libhdmipassthru.so
 vendor/lib64/libhdmipassthru.so
 vendor/lib/libssrec.so
 vendor/lib64/libssrec.so
 
-# Alarm - from S62Pro RKQ1.210406.002
+# Alarm - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# ANT+ - from S62Pro RKQ1.210406.002
+# ANT+ - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# CDSP - from S62Pro RKQ1.210406.002
+# CDSP - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
@@ -57,7 +57,7 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
-# Audio - from OSS LA.UM.9.6.3.r1-06200-89xx.0-1
+# Audio - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -65,7 +65,7 @@ vendor/lib/libacdbrtac.so
 # Audio - from ASUS_X00TD-17.2017.2012.438-20201203
 vendor/lib/libaudcal.so|f45a9cfe7522d6b7e0ab70146fe8511de2bfff03
 
-# Audio - from S62Pro RKQ1.210406.002
+# Audio - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudioalsa.so
@@ -85,7 +85,7 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 vendor/lib64/liblistensoundmodel2.so
 
-# Audio FX modules - from S62Pro RKQ1.210406.002
+# Audio FX modules - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
@@ -97,7 +97,7 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
-# Bluetooth - from S62Pro RKQ1.210406.002
+# Bluetooth - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -108,17 +108,17 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Bluetooth-Audio - from S62Pro RKQ1.210406.002
+# Bluetooth-Audio - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 
-# Camera-sensors - from S62Pro RKQ1.210406.002
+# Camera-sensors - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libmmcamera_ppeiscore.so
 
-# Charger - from S62Pro RKQ1.210406.002
+# Charger - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hvdcp_opti
 
-# CNE - from S62Pro RKQ1.210406.002
+# CNE - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
@@ -179,11 +179,11 @@ vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
-# Connection Security - from S62Pro RKQ1.210406.002
+# Connection Security - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/ssgqmigd
 vendor/lib64/libminksocket.so
 
-# Data - from S62Pro RKQ1.210406.002
+# Data - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/adpl
 vendor/bin/netmgrd
 vendor/bin/port-bridge
@@ -204,17 +204,17 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 
-# Diag - from S62Pro RKQ1.210406.002
+# Diag - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 
-# DPM - from S62Pro RKQ1.210406.002
+# DPM - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM - from S62Pro RKQ1.210406.002
+# DRM - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libsdedrm.so
@@ -236,7 +236,7 @@ vendor/lib64/libsi.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
-# DRM-Qteeconnector - from S62Pro RKQ1.210406.002
+# DRM-Qteeconnector - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -246,40 +246,42 @@ vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
-# DRM-Widevine - from S62Pro RKQ1.210406.002
+# DRM-Widevine - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+vendor/lib64/libcpion.so
+
+# DRM-Widevine - from ASUS_X00TD-user 10 QKQ1 72 release-keys +
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/libcpion.so
 vendor/lib64/libwvhidl.so
 
 # DRM-Widevine - from ASUS_X01BD-user 10 QKQ1 73 release-keys +
 vendor/lib64/liboemcrypto.so|7380e52e0ec82fef90a9aa1ea305e356d7cfef29
 
-# DRM-Widevine-HDCP - from S62Pro RKQ1.210406.002
+# DRM-Widevine-HDCP - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
 
-# DSP - from S62Pro RKQ1.210406.002
+# DSP - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# FM - from S62Pro RKQ1.210406.002
+# FM - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Gatekeeper - from S62Pro RKQ1.210406.002
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|335cc2f4e263b4c20b2b7ad5cd6c39c68cdea7ba
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|eaf70216b4e53f409c22764b272b79cd60a4b714
+# Gatekeeper - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# GPS - from S62Pro RKQ1.210406.002
+# GPS - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -328,7 +330,7 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# Graphics - from S62Pro RKQ1.210406.002
+# Graphics - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -360,11 +362,11 @@ vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libgpudataproducer.so
 
-# Graphics (HDR) - from S62Pro RKQ1.210406.002
+# Graphics (HDR) - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libhdr_tm.so
 vendor/lib64/libhdr_tm.so
 
-# Graphics (SDM) -from S62Pro RKQ1.210406.002
+# Graphics (SDM) -from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libqseed3.so
 vendor/lib64/libqseed3.so
 vendor/lib/libsdm-color.so
@@ -378,30 +380,30 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Graphics (Vulkan) - from S62Pro RKQ1.210406.002
+# Graphics (Vulkan) - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib/libVkLayer_q3dtools.so
 vendor/lib64/libVkLayer_q3dtools.so
 
-# IRQ balance - from LA.UM.8.2.r1-06700-sdm660.0 +
-vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
+# IRQ balance - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+vendor/bin/msm_irqbalance
 
-# Keymaster - from S62Pro RKQ1.210406.002
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|002c638011b1936fecaa896874d3361ec68eaa46
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|a3c2f2a5006a85015b6081136e1b52d22ef24f10
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so|ce2b3776fb2e69f893cab0c2fda751b493b1a7be
-vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc|573b7392c8997008204081165cfe81a11080745d
-vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
-vendor/lib/libkeymasterdeviceutils.so|a0de8c0055d2cfac9202d8eef88854c1e9795ff4
-vendor/lib/libkeymasterprovision.so|c16328226bb07371a4928906bd70888bbee27895
-vendor/lib/libkeymasterutils.so|a2f7e894af47c33c8bf700b5a1e0a676196affde
-vendor/lib64/libkeymasterdeviceutils.so|6fd0b0e1b30c4e6c5272794896306596880c657b
-vendor/lib64/libkeymasterprovision.so|d6c95d3543c707df133d50764f647e5f07adb82b
-vendor/lib64/libkeymasterutils.so|2392abef423c0610d9625670f1ff3063532e9bc1
+# Keymaster - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
+vendor/lib64/libqcbor.so
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib/libkeymasterprovision.so
+vendor/lib/libkeymasterutils.so
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
 
-# Listen - from S62Pro RKQ1.210406.002
-vendor/lib/hw/sound_trigger.primary.msm8937.so:vendor/lib/hw/sound_trigger.primary.sdm660.so
+# Listen - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+vendor/lib/hw/sound_trigger.primary.sdm660.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
@@ -409,7 +411,7 @@ vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/libsmwrapper.so
 
-# Media - from S62Pro RKQ1.210406.002
+# Media - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -441,24 +443,24 @@ vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxWmaDec.so
 
-# MM OSAL - from S62Pro RKQ1.210406.002
+# MM OSAL - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib/libmmosal.so
 vendor/lib64/libmmosal.so
 
 # NFC - from UL-ASUS_X00T-WW-17.2017.2012.438
 vendor/lib/libpn553_fw.so
 
-# Peripheral manager - from S62Pro RKQ1.210406.002
+# Peripheral manager - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# QCC VND HAL - from S62Pro RKQ1.210406.002
+# QCC VND HAL - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QMI - from S62Pro RKQ1.210406.002
+# QMI - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/irsc_util
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-ns
@@ -485,7 +487,7 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
-# QSEEcom Hal - from S62Pro RKQ1.210406.002
+# QSEEcom Hal - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
@@ -493,11 +495,11 @@ vendor/lib/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# Radio - RemoteFS - from S62Pro RKQ1.210406.002
+# Radio - RemoteFS - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
-# Radio - IMS - from S62Pro RKQ1.210406.002
+# Radio - IMS - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
@@ -543,7 +545,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 # Radio - QCRIL - from LA.UM.9.12.r1-10800-SMxx50.0-AOSPA +
 vendor/lib64/deviceInfoServiceModule.so|a9b0dd9a206384c0600f2322c4a319582bd1cdfb
 
-# Radio - QCRIL - from S62Pro RKQ1.210406.002
+# Radio - QCRIL - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hw/qcrild
 vendor/bin/pd-mapper
 vendor/etc/init/qcrild.rc
@@ -599,7 +601,7 @@ vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
-# Radio - Telephony - from S62Pro RKQ1.210406.002
+# Radio - Telephony - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system/framework/tcmclient.jar
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -767,22 +769,24 @@ system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 
 # Radio (IMS) - from LA.UM.9.6.3.r1-06200-89xx.0
-vendor/etc/init/ims_rtp_daemon_legacy.rc|104b2a879db4d3dd44e74a3d7f6e69f6972c9129
 -system_ext/priv-app/ims/ims.apk
+
+# Radio (IMS) - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+vendor/etc/init/ims_rtp_daemon_legacy.rc
 system_ext/lib64/lib-imscamera.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/libimsmedia_jni.so
 
-# IMS (VT) - from Redmi/sweet_global/sweet:12/SKQ1.210908.001/V13.0.3.0.SKFMIXM:user/release-keys
-system_ext/lib64/lib-imsvideocodec.so|b7001bb1008106ccb9ef92dd2560e2052b40c325
-system_ext/lib64/lib-imsvtutils.so|875748249b9269e964f467311c72e123878c0de9
-system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
+# IMS (VT) - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libimscamera_jni.so
 
-# Latency - from S62Pro RKQ1.210406.002
+# Latency - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 
-# PD - from S62Pro RKQ1.210406.002
+# PD - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
@@ -793,7 +797,7 @@ vendor/lib64/hw/sensors.sdm660_64.so
 vendor/lib/sensors.native.so
 vendor/lib64/sensors.native.so
 
-# Sensors - from S62Pro RKQ1.210406.002
+# Sensors - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/sensors.qti
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
@@ -802,40 +806,35 @@ vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
 
-# SSR - from S62Pro RKQ1.210406.002
+# SSR - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 vendor/lib/libsubsystem_control.so
 vendor/lib64/libsubsystem_control.so
 
-# Thermal - from S62Pro RKQ1.210406.002
+# Thermal - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 
-# TUI - from S62Pro RKQ1.210406.002
+# TUI - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# Time services - from S62Pro RKQ1.210406.002
+# Time services - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 -vendor/app/TimeService/TimeService.apk;PRESIGNED
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 -vendor/lib64/libtime_genoff.so
 
-# SMC Invoke - from LA.UM.9.12.r1-10800-SMxx50.0 +
-vendor/etc/ssg/ta_config.json|e18554b038da3737b7352d1271e5fde9c789c9df
-vendor/etc/ssg/tz_whitelist.json|c0dc4f4cfee20db5993eb5142e362cba7dfaecd6
-vendor/lib64/libnative-api.so|09c8712984bb02dbf43c536e7835a7307b5115e8
-
-# SMC Invoke - from S62Pro RKQ1.210406.002
+# SMC Invoke - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/lib64/libminkdescriptor.so
 
-# TFTP - from S62Pro RKQ1.210406.002
+# TFTP - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
