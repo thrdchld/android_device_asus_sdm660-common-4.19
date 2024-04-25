@@ -259,15 +259,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <version>2.2</version>
-        <interface>
-            <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -390,6 +381,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@2.1::IFactory/default</fqname>
         <fqname>@2.2::IFactory/default</fqname>
         <fqname>@2.3::IFactory/default</fqname>
+        <fqname>@2.4::IFactory/default</fqname>
+        <fqname>@2.5::IFactory/default</fqname>
     </hal>
     <!-- DSP Service -->
     <hal format="hidl">
