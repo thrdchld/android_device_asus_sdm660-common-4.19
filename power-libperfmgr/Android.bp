@@ -18,7 +18,7 @@ package {
 }
 
 cc_library {
-    name: "libdisppower-xiaomi_sdm660",
+    name: "libdisppower-asus_sdm660",
     proprietary: true,
     srcs: [
         "disp-power/InteractionHandler.cpp",
@@ -33,7 +33,7 @@ cc_library {
 }
 
 cc_library {
-    name: "libadaptivecpu-xiaomi_sdm660",
+    name: "libadaptivecpu-asus_sdm660",
     proprietary: true,
     vendor: true,
     srcs: [
@@ -62,7 +62,7 @@ cc_library {
 }
 
 cc_test {
-    name: "libadaptivecpu_test-xiaomi_sdm660",
+    name: "libadaptivecpu_test-asus_sdm660",
     proprietary: true,
     vendor: true,
     srcs: [
@@ -76,7 +76,7 @@ cc_test {
         "adaptivecpu/tests/WorkDurationProcessorTest.cpp",
     ],
     static_libs: [
-        "libadaptivecpu-xiaomi_sdm660",
+        "libadaptivecpu-asus_sdm660",
         "libgmock",
         "android.hardware.power-V3-ndk",
     ],
@@ -89,20 +89,20 @@ cc_test {
 }
 
 cc_binary {
-    name: "android.hardware.power-service.xiaomi_sdm660-libperfmgr",
+    name: "android.hardware.power-service.asus_sdm660-libperfmgr",
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.power-service.xiaomi_sdm660-libperfmgr.rc"],
-    vintf_fragments: ["aidl/android.hardware.power-service.xiaomi_sdm660.xml"],
+    init_rc: ["aidl/android.hardware.power-service.asus_sdm660-libperfmgr.rc"],
+    vintf_fragments: ["aidl/android.hardware.power-service.asus_sdm660.xml"],
     vendor: true,
     shared_libs: [
         "android.hardware.power-V3-ndk",
-        "libadaptivecpu-xiaomi_sdm660",
+        "libadaptivecpu-asus_sdm660",
         "libbase",
         "libcutils",
         "liblog",
         "libutils",
         "libbinder_ndk",
-        "libdisppower-xiaomi_sdm660",
+        "libdisppower-asus_sdm660",
         "libperfmgr",
         "libprocessgroup",
         "pixel-power-ext-V1-ndk",

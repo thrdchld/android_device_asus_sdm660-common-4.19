@@ -31,11 +31,11 @@
 #include "PowerSessionManager.h"
 
 #ifndef TAP_TO_WAKE_NODE
-#define TAP_TO_WAKE_NODE "/sys/touchpanel/double_tap"
+#define TAP_TO_WAKE_NODE "/sys/kernel/touchpanel/dclicknode"
 #endif
 
 #ifndef TAP_TO_WAKE_NODE2
-#define TAP_TO_WAKE_NODE2 "/proc/touchscreen/enable_dt2w"
+#define TAP_TO_WAKE_NODE2 "/proc/tpd_gesture"
 #endif
 
 namespace aidl {
