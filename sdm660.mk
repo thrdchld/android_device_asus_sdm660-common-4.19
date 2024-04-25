@@ -464,7 +464,6 @@ PRODUCT_PACKAGES += \
     init.qcom.asus.rc \
     init.qcom.rc \
     init.msm.usb.configfs.rc \
-    init.target_dap.rc \
     init.asus_parts.rc \
     init.recovery.qcom.rc \
     init.target.rc \

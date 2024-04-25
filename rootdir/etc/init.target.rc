@@ -27,7 +27,6 @@
 #
 #
 
-import /vendor/etc/init/hw/init.target_dap.rc
 import /vendor/etc/init/vendor.qti.adsprpc-service.rc
 import /vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 
@@ -48,6 +47,25 @@ on init
 
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    start hwservicemanager
+    mount_all --early
+    swapon_all /vendor/etc/fstab.qcom
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/bms 0700 root system
+    write /sys/kernel/boot_adsp/boot 1
+
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all --late
 
 on post-fs
     start vendor.qseecomd
