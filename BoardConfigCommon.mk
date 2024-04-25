@@ -223,6 +223,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := false
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
