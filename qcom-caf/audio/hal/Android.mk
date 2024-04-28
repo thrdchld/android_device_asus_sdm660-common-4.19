@@ -394,9 +394,9 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_GCOV)),true)
     LOCAL_STATIC_LIBRARIES += libprofile_rt
 endif
 
-LOCAL_SHARED_LIBRARIES += libbase libhidlbase libutils android.hardware.power@1.2 liblog
+LOCAL_SHARED_LIBRARIES += libbase libhidlbase libutils android.hardware.power@1.3 liblog
 
-LOCAL_SHARED_LIBRARIES += android.hardware.power-V1-ndk
+LOCAL_SHARED_LIBRARIES += android.hardware.power-V3-ndk
 LOCAL_SHARED_LIBRARIES += libbinder_ndk
 
 LOCAL_SRC_FILES += audio_perf.cpp
