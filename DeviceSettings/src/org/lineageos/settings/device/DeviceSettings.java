@@ -24,11 +24,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import org.lineageos.settings.device.kcal.KCalSettingsActivity;
-import org.lineageos.settings.device.speaker.ClearSpeakerActivity;
 import org.lineageos.settings.device.preferences.SecureSettingListPreference;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
-import org.lineageos.settings.device.preferences.VibrationSeekBarPreference;
-import org.lineageos.settings.device.preferences.NotificationLedSeekBarPreference;
 import org.lineageos.settings.device.preferences.CustomSeekBarPreference;
 
 import java.lang.Math.*;
@@ -36,44 +33,14 @@ import java.lang.Math.*;
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    public static final String CATEGORY_VIBRATOR = "vibration";
-    public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
-    public static final String VIBRATION_STRENGTH_PATH = "/sys/module/qti_haptics/parameters/vmax_mv_override";
-
-    public static final String CATEGORY_NOTIF = "notification_led";
-    public static final String PREF_NOTIF_LED = "notification_led_brightness";
-    public static final String NOTIF_LED_PATH = "/sys/class/leds/red/max_brightness";
-
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 
-    // value of vtg_min and vtg_max
-    public static final int MIN_VIBRATION = 116;
-    public static final int MAX_VIBRATION = 3596;
-
-    // value of min_led and max_led
-    public static final int MIN_LED = 1;
-    public static final int MAX_LED = 255;
-
     private static final String CATEGORY_DISPLAY = "display";
-    private static final String PREF_DEVICE_DOZE = "device_doze";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
-
-    private static final String CATEGORY_HALL_WAKEUP = "hall_wakeup";
-    public static final String PREF_HALL_WAKEUP = "hall";
-    public static final String HALL_WAKEUP_PATH = "/sys/module/hall/parameters/hall_toggle";
-    public static final String HALL_WAKEUP_PROP = "persist.service.folio_daemon";
-
-    private static final String DEVICE_DOZE_PACKAGE_NAME = "com.advanced.settings.doze";
-
-    private static final String DEVICE_JASON_PACKAGE_NAME = "org.lineageos.settings.devicex";
-    private static final String PREF_DEVICE_JASON = "device_jason";
-    
-    private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
-    private Preference mClearSpeakerPref;
 
     private SecureSettingSwitchPreference mEnableDirac;
     private SecureSettingListPreference mHeadsetType;
@@ -82,37 +49,9 @@ public class DeviceSettings extends PreferenceFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences_xiaomi_parts, rootKey);
-        
-        mClearSpeakerPref = (Preference) findPreference(PREF_CLEAR_SPEAKER);
-        mClearSpeakerPref.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), ClearSpeakerActivity.class);
-            startActivity(intent);
-            return true;
-        });
-
-        // LED Brightness
-        if (FileUtils.fileWritable(NOTIF_LED_PATH)) {
-            NotificationLedSeekBarPreference notifLedBrightness =
-                    (NotificationLedSeekBarPreference) findPreference(PREF_NOTIF_LED);
-            notifLedBrightness.setOnPreferenceChangeListener(this);
-        } else { getPreferenceScreen().removePreference(findPreference(CATEGORY_NOTIF)); }
-
-        // Haptic Strength
-        if (FileUtils.fileWritable(VIBRATION_STRENGTH_PATH)) {
-            VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
-            vibrationStrength.setOnPreferenceChangeListener(this);
-        } else { getPreferenceScreen().removePreference(findPreference(CATEGORY_VIBRATOR)); }
 
         // Display Category
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
-        // Doze
-        if (isAppNotInstalled(DEVICE_DOZE_PACKAGE_NAME)) {
-            displayCategory.removePreference(findPreference(PREF_DEVICE_DOZE));
-        }
-        // Jason Settings
-        if (isAppNotInstalled(DEVICE_JASON_PACKAGE_NAME)) {
-            displayCategory.removePreference(findPreference(PREF_DEVICE_JASON));
-        }
         //FPS Info
         SecureSettingSwitchPreference fpsInfo = (SecureSettingSwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setOnPreferenceChangeListener(this);
@@ -149,29 +88,12 @@ public class DeviceSettings extends PreferenceFragment implements
         // Preset
         mPreset = (SecureSettingListPreference) findPreference(PREF_PRESET);
         mPreset.setOnPreferenceChangeListener(this);
-
-        if (FileUtils.fileWritable(HALL_WAKEUP_PATH)) {
-            SecureSettingSwitchPreference hall = (SecureSettingSwitchPreference) findPreference(PREF_HALL_WAKEUP);
-            hall.setChecked(FileUtils.getValue(HALL_WAKEUP_PATH).equals("Y"));
-            hall.setOnPreferenceChangeListener(this);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_HALL_WAKEUP));
-        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case PREF_NOTIF_LED:
-                FileUtils.setValue(NOTIF_LED_PATH, (1 + Math.pow(1.05694, (int) value )));
-                break;
-
-            case PREF_VIBRATION_STRENGTH:
-                double vibrationValue = (int) value / 100.0 * (MAX_VIBRATION - MIN_VIBRATION) + MIN_VIBRATION;
-                FileUtils.setValue(VIBRATION_STRENGTH_PATH, vibrationValue);
-                break;
-
             case PREF_ENABLE_DIRAC:
                 try {
                     DiracService.sDiracUtils.setEnabled((boolean) value);
@@ -197,11 +119,6 @@ public class DeviceSettings extends PreferenceFragment implements
                     getContext().startService(new Intent(getContext(), DiracService.class));
                     DiracService.sDiracUtils.setLevel(String.valueOf(value));
                 }
-                break;
-
-            case PREF_HALL_WAKEUP:
-                FileUtils.setValue(HALL_WAKEUP_PATH, (boolean) value ? "Y" : "N");
-                FileUtils.setProp(HALL_WAKEUP_PROP, (boolean) value);
                 break;
 
             case PREF_KEY_FPS_INFO:
