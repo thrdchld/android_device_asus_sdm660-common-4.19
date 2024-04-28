@@ -601,6 +601,9 @@ vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
+# Radio - Telephony - from Google barbet:14/AP1A.240405.002/11480754:user
+-system_ext/app/xdivert/xdivert.apk
+
 # Radio - Telephony - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system/framework/tcmclient.jar
@@ -610,7 +613,6 @@ product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system_ext/app/uimlpaservice/uimlpaservice.apk
 -system_ext/app/uimremoteclient/uimremoteclient.apk
 -system_ext/app/uimremoteserver/uimremoteserver.apk
--system_ext/app/xdivert/xdivert.apk
 system_ext/bin/diag_mdlog_system
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
@@ -768,7 +770,7 @@ system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
 system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# Radio (IMS) - from LA.UM.9.6.3.r1-06200-89xx.0
+# Radio (IMS) - from Google barbet:14/AP1A.240405.002/11480754:user
 -system_ext/priv-app/ims/ims.apk
 
 # Radio (IMS) - from helios-user 13 13-22-18.00-TG-U00-STD-HEL-04 62
@@ -838,5 +840,5 @@ vendor/lib64/libminkdescriptor.so
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# WiFi - from LA.UM.9.12.r1-10800-SMxx50.0 +
-vendor/bin/cnss-daemon|78ebe10a7a46e22d36864406b23f4164b522115c
+# WiFi - from Honeywell hon660-user 12 93.00.05 0054
+vendor/bin/cnss-daemon
