@@ -140,15 +140,6 @@ void NFC_check()
 
 void vendor_load_properties()
  {
-    std::string fingerprint;
-    std::string description;
-
-    fingerprint = "google/cheetah/cheetah:13/TQ3A.230805.001/10316531:user/release-keys";
-    description = "cheetah-user 13 TQ3A.230805.001 10316531 release-keys";
-
-    set_ro_build_prop("fingerprint", fingerprint);
-    property_override("ro.build.description", description.c_str());
-    
     check_device();
     set_avoid_gfxaccel_config();
     NFC_check();
